@@ -1,0 +1,61 @@
+package repasoCadenas;
+
+import java.util.Scanner;
+
+/**
+ * 
+ * Realizar un programa que lea en una cadena el nombre  completo de una persona 
+ * (nombre y apellidos) y muestre por pantalla el nombre, apellido1 y apellido2. 
+ * Si el nombre completo no es correcto mostrará un mensaje de error.
+ * 
+ * @author Fran VIlla 
+ *
+ */
+public class Ejercicio01RepasoCadenas {
+	
+	private static Scanner teclado = new Scanner (System.in);
+
+	public static void main(String[] args) {
+		//Variables
+		String nombrePedido;
+		boolean nombreCorrecto;
+		// Inicio
+		
+		do {
+			System.out.println("Introduce tu nombre: ");
+			nombrePedido = teclado.nextLine();
+		} while (esCorrectoNombre(nombrePedido) == false);
+		
+
+	}
+	
+	//Metodos
+	
+	/**
+	 * Metodo para comprobar que un nombre es correcto
+	 * 
+	 * @param nombre
+	 * @return
+	 */
+	public static boolean esCorrectoNombre (String nombre) {
+		boolean esCorrecto = true;
+		char caracter;
+		for (int contador = 0; contador < nombre.length() && esCorrecto == true ; contador++ ) {
+			caracter = nombre.charAt(contador);
+			
+			if (Character.isDigit(caracter)) {
+				esCorrecto = false; 
+			}
+			
+		}
+		
+		return esCorrecto; 
+	}
+	
+	public static void divisionNombre (String nombre) {
+		
+		
+		
+	}
+
+}
