@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/Users/franvilla/OneDrive - Consejería de educación y deporte Andalucía/GSDAM/Primero-Segundo/Código/Programacion/Repaso/.metadata/.plugins/org.eclipse.jdt.core
-1975898214.index
-1865797976.index
-30038764.index
