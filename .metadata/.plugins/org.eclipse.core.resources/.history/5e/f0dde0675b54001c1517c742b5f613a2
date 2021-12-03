@@ -18,7 +18,7 @@ public class Ejercicio01RepasoCadenas {
 	public static void main(String[] args) {
 		//Variables
 		String nombrePedido;
-		
+		boolean nombreCorrecto;
 		// Inicio
 		
 		do {
