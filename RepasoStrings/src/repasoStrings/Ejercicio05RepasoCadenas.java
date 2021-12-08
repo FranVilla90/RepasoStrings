@@ -86,9 +86,10 @@ public class Ejercicio05RepasoCadenas {
 		String diminutivoMasculino;
 		String cadenaDiminutivoMasculino = "ITO";
 		int posicionFinal = cadenaSB.length()-1;
+		char caracterFinal = cadenaSB.charAt(posicionFinal);
 		
 		
-		if (cadenaSB.lastIndexOf("a") == 0 || cadenaSB.lastIndexOf("e") == 0 || cadenaSB.lastIndexOf("i") == 0 || cadenaSB.lastIndexOf("o") == 0 || cadenaSB.lastIndexOf("u") == 0) {
+		if (caracterFinal == 'a' || caracterFinal == 'e' || caracterFinal == 'i'  || caracterFinal == 'o' || caracterFinal == 'u' ) {
 			cadenaSB.deleteCharAt(posicionFinal).append(cadenaDiminutivoMasculino);
 			diminutivoMasculino = cadenaSB.toString();
 		} else {
@@ -112,8 +113,9 @@ public class Ejercicio05RepasoCadenas {
 		String diminutivoFemenino;
 		String cadenaDiminutivoFemenino = "ITA";
 		int posicionFinal = cadenaSB.length()-1;
+		char caracterFinal = cadenaSB.charAt(posicionFinal);
 		
-		if (cadenaSB.lastIndexOf("a") == 0 || cadenaSB.lastIndexOf("e") == 0 || cadenaSB.lastIndexOf("i") == 0 || cadenaSB.lastIndexOf("o") == 0 || cadenaSB.lastIndexOf("u") == 0) {
+		if (caracterFinal == 'a' || caracterFinal == 'e' || caracterFinal == 'i'  || caracterFinal == 'o' || caracterFinal == 'u' ) {
 			cadenaSB.deleteCharAt(posicionFinal).append(cadenaDiminutivoFemenino);
 			diminutivoFemenino = cadenaSB.toString();
 		} else {
