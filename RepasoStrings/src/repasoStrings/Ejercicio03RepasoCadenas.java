@@ -6,7 +6,7 @@ import java.util.Scanner;
  * Realizar un método que reciba como entrada dos cadenas de caracteres y 
  * devuelva una tercera cadena intercalando los caracteres de las palabras de las cadenas recibidas
  * 
- * @author franvilla
+ * @author Fran Villa
  *
  */
 
