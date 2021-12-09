@@ -45,8 +45,6 @@ public class Ejercicio05RepasoCadenas {
 	public static String creacionDiminutivo (String cadena) {
 		String creacionDiminutivo = "";
 		char genero;
-
-		
 		int posicionFinal = cadena.length()-1;
 		StringBuilder cadenaSB;
 		cadenaSB = new StringBuilder(cadena);
@@ -55,16 +53,7 @@ public class Ejercicio05RepasoCadenas {
 		if (cadena.charAt(posicionFinal) == 'a') {
 			creacionDiminutivo = diminutivoFemenino(cadenaSB);
 		} else if (cadena.charAt(posicionFinal) == 'o') {
-			creacionDiminutivo = diminutivoMasculino(cadenaSB);
-			
-		} else if (cadena.charAt(posicionFinal) == 'e' || cadena.charAt(posicionFinal) == 'i' || cadena.charAt(posicionFinal) == 'u' ) {
-			genero = tecladoGenero();
-			if (genero == 'M') {
-				creacionDiminutivo = diminutivoMasculino(cadenaSB);
-			} else {
-				creacionDiminutivo = diminutivoFemenino(cadenaSB);
-			}
-			
+			creacionDiminutivo = diminutivoMasculino(cadenaSB);	
 		} else {
 			genero = tecladoGenero();
 			if (genero == 'M') {
@@ -89,15 +78,14 @@ public class Ejercicio05RepasoCadenas {
 		char caracterFinal = cadenaSB.charAt(posicionFinal);
 		
 		
-		if (caracterFinal == 'a' || caracterFinal == 'e' || caracterFinal == 'i'  || caracterFinal == 'o' || caracterFinal == 'u' ) {
-			cadenaSB.deleteCharAt(posicionFinal).append(cadenaDiminutivoMasculino);
-			diminutivoMasculino = cadenaSB.toString();
-		} else {
+		if (caracterFinal == 'e' || caracterFinal == 'i'  || caracterFinal == 'u' ) {
+			cadenaSB.deleteCharAt(posicionFinal);
+		} 
 		
 		cadenaSB.append(cadenaDiminutivoMasculino);
 		diminutivoMasculino = cadenaSB.toString();
 		
-		}
+		
 		
 		return diminutivoMasculino;
 	}
@@ -115,13 +103,13 @@ public class Ejercicio05RepasoCadenas {
 		int posicionFinal = cadenaSB.length()-1;
 		char caracterFinal = cadenaSB.charAt(posicionFinal);
 		
-		if (caracterFinal == 'a' || caracterFinal == 'e' || caracterFinal == 'i'  || caracterFinal == 'o' || caracterFinal == 'u' ) {
-			cadenaSB.deleteCharAt(posicionFinal).append(cadenaDiminutivoFemenino);
-			diminutivoFemenino = cadenaSB.toString();
-		} else {
+		if (caracterFinal == 'e' || caracterFinal == 'i'  ||  caracterFinal == 'u' ) {
+			cadenaSB.deleteCharAt(posicionFinal);
+			
+		} 
 			cadenaSB.append(cadenaDiminutivoFemenino);
-			diminutivoFemenino = cadenaSB.toString();
-		}
+			diminutivoFemenino = cadenaSB.toString().toUpperCase();
+	
 		
 		return diminutivoFemenino;
 	}

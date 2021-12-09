@@ -41,15 +41,20 @@ public class Ejercicio01RepasoCadenas {
 	 */
 	public static boolean esCorrectoNombre (String nombre) {
 		boolean esCorrecto = true;
-		char caracter;
-		for (int contador = 0; contador < nombre.length() && esCorrecto == true ; contador++ ) {
-			caracter = nombre.charAt(contador);
-			
-			if (Character.isDigit(caracter)) {
-				esCorrecto = false; 
-				System.out.println("El nombre es incorrecto");
-			}
-			
+//		char caracter;
+//		for (int contador = 0; contador < nombre.length() && esCorrecto == true ; contador++ ) {
+//			caracter = nombre.charAt(contador);
+//			
+//			if (Character.isDigit(caracter)) {
+//				esCorrecto = false; 
+//				System.out.println("El nombre es incorrecto");
+//			}
+//			
+//		}
+		
+		if (nombre.indexOf(' ') == nombre.lastIndexOf(' ')) {
+			esCorrecto = false;
+			System.out.println("Nombre incompleto, introduce el nombre completo");
 		}
 		
 		return esCorrecto; 
@@ -61,16 +66,27 @@ public class Ejercicio01RepasoCadenas {
 		int posicionApellido1, posicionApellido2; 
 		
 		//Sacar el segundo Apellido
-		posicionApellido2 = nombreCompleto.lastIndexOf(" ");
-		apellido2 = nombreCompleto.substring(posicionApellido2, nombreCompleto.length()).toUpperCase();
-		
+//		posicionApellido2 = nombreCompleto.lastIndexOf(" ");
+//		apellido2 = nombreCompleto.substring(posicionApellido2, nombreCompleto.length()).toUpperCase();
+//		
 		//Sacar el primer Apellido
-		posicionApellido1 = nombreCompleto.lastIndexOf(" ", posicionApellido2-1);
-		apellido1 = nombreCompleto.substring(posicionApellido1,posicionApellido2).toUpperCase();
+//		posicionApellido1 = nombreCompleto.lastIndexOf(" ", posicionApellido2-1);
+//		apellido1 = nombreCompleto.substring(posicionApellido1,posicionApellido2).toUpperCase();
 		
 		//Sacar el nombre
 		
+		//nombre = nombreCompleto.substring(0, posicionApellido1).toUpperCase();
+		
+		//Sacar el nombre
+		posicionApellido1 = nombreCompleto.indexOf(" ");
 		nombre = nombreCompleto.substring(0, posicionApellido1).toUpperCase();
+		
+		//Sacar el primer apellido
+		posicionApellido2 = nombreCompleto.indexOf(" ", posicionApellido1 + 1);
+		apellido1 = nombreCompleto.substring(posicionApellido1+1,posicionApellido2).toUpperCase();
+		
+		//Sacar segundo apellido
+		apellido2 = nombreCompleto.substring(posicionApellido2, nombreCompleto.length()).toUpperCase();
 		
 		System.out.println("El nombre es: " + nombre + "\n"
 						 +"El primer apellido es: " + apellido1 + "\n"
